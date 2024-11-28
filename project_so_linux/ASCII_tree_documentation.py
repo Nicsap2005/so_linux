@@ -1,3 +1,4 @@
+from searcher import search
 class Node:
     def __init__(self, name):
         self.parent = None
@@ -7,6 +8,8 @@ class Node:
         self.child_files = []
         self.edges = 0
         self.base = ""
+        
+        self.output = search()
 
     def build_tree(self, UBUNTU, depth, stacking):
         """
@@ -95,17 +98,33 @@ class Node:
             lst.pop()
 
 
+# def tembelek(UBUNTU, depth, output_file_path='output.txt'):
+#     if depth == 0: depth = float('inf')
+#     root = Node(UBUNTU.get_current_path() + '/')
+#     root.child_files = UBUNTU.get_available_files()
+
+#     stacking = [root.name]
+#     with open(output_file_path, 'w') as file:
+#         root.build_tree(UBUNTU, depth, stacking)
+#         file.write(f'{root.name}\n')
+#         file.write('|\n')
+#         root.pretty_printing_directories([], file)
+#         # root.pretty_printing_files([], file)
+#     UBUNTU.change_directory(root.name)
+
 def tembelek(UBUNTU, depth, output_file_path='output.txt'):
     if depth == 0: depth = float('inf')
     root = Node(UBUNTU.get_current_path() + '/')
     root.child_files = UBUNTU.get_available_files()
 
     stacking = [root.name]
-    with open(output_file_path, 'w') as file:
+    with open(root.output.main()+"/"+output_file_path, 'w') as file:
         root.build_tree(UBUNTU, depth, stacking)
         file.write(f'{root.name}\n')
         file.write('|\n')
         root.pretty_printing_directories([], file)
         # root.pretty_printing_files([], file)
     UBUNTU.change_directory(root.name)
+    
+
 

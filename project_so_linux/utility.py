@@ -1,3 +1,4 @@
+from searcher import search
 from central_function import LinuxOS
 from ASCII_tree_documentation import tembelek
 import tkinter as tk
@@ -5,6 +6,7 @@ import tkinter as tk
 class util:
     def __init__(self):
         self.ubuntu = LinuxOS()
+        self.output = search()
         
         self.show_changedir_enabled = False
         self.changedirButton = None
@@ -120,13 +122,13 @@ class util:
         print("Text box content:", content)
         tembelek(self.ubuntu,int(content), output_file_path='output.txt')
         tree = ''
-        with open("output.txt") as output:
+        with open(f"{self.output.main()}/output.txt") as output:
             for i in output:
                 tree += i
         tinggi = len(tree)
         if tinggi > 50:
             tinggi = len(tree)//20
-        
+        print(tree)
         tree_box.insert(tk.END, tree + "\n")
         
     def remove_Tree_btn(self):
@@ -148,3 +150,4 @@ class util:
         self.remove_getTextButton_btn(text_box)
         self.remove_Tree_btn()
         self.remove_getTreeButton_btn(text_box)
+    
