@@ -1,75 +1,74 @@
-/home/nicsap/
+/home/nicsap/coding/
 |
-├── coding/
-|    ├── 71230994/
-|    |    ├── del_temp.py
-|    |    └── del_temp.py:Zone.Identifier
-|    |    
+├── 71230994/
+|    ├── del_temp.py
+|    └── del_temp.py:Zone.Identifier
+|    
+├── SO_project-master/
 |    ├── SO_project-master/
-|    |    ├── SO_project-master/
-|    |    |    ├── __pycache__/
-|    |    |    |    ├── ASCII_tree.cpython-311.pyc
-|    |    |    |    ├── ASCII_tree_documentation.cpython-311.pyc
-|    |    |    |    ├── ASCII_tree_documentation.cpython-312.pyc
-|    |    |    |    ├── ASCII_tree_documentation.cpython-38.pyc
-|    |    |    |    ├── central_function.cpython-311.pyc
-|    |    |    |    ├── central_function.cpython-312.pyc
-|    |    |    |    └── central_function.cpython-38.pyc
-|    |    |    |    
-|    |    |    ├── ASCII_tree_documentation.py
-|    |    |    ├── README.md
-|    |    |    ├── central_function.py
-|    |    |    └── main.py
-|    |    |    
 |    |    ├── __pycache__/
 |    |    |    ├── ASCII_tree.cpython-311.pyc
-|    |    |    ├── ASCII_tree.cpython-311.pyc:Zone.Identifier
 |    |    |    ├── ASCII_tree_documentation.cpython-311.pyc
-|    |    |    ├── ASCII_tree_documentation.cpython-311.pyc:Zone.Identifier
 |    |    |    ├── ASCII_tree_documentation.cpython-312.pyc
-|    |    |    ├── ASCII_tree_documentation.cpython-312.pyc:Zone.Identifier
 |    |    |    ├── ASCII_tree_documentation.cpython-38.pyc
 |    |    |    ├── central_function.cpython-311.pyc
-|    |    |    ├── central_function.cpython-311.pyc:Zone.Identifier
 |    |    |    ├── central_function.cpython-312.pyc
-|    |    |    ├── central_function.cpython-312.pyc:Zone.Identifier
-|    |    |    ├── central_function.cpython-38.pyc
-|    |    |    ├── output_tree.txt
-|    |    |    ├── performances.cpython-38.pyc
-|    |    |    └── utility.cpython-38.pyc
+|    |    |    └── central_function.cpython-38.pyc
 |    |    |    
 |    |    ├── ASCII_tree_documentation.py
-|    |    ├── ASCII_tree_documentation.py:Zone.Identifier
 |    |    ├── README.md
-|    |    ├── README.md:Zone.Identifier
-|    |    ├── central_function.py:Zone.Identifier
-|    |    ├── main.py
-|    |    ├── main.py:Zone.Identifier
-|    |    ├── performances.py
-|    |    ├── test.py
-|    |    └── utility.py
-|    |    
-|    ├── project_so_linux/
-|    |    ├── __pycache__/
-|    |    |    ├── ASCII_tree_documentation.cpython-38.pyc
-|    |    |    ├── central_function.cpython-38.pyc
-|    |    |    ├── main.cpython-38.pyc
-|    |    |    ├── performances.cpython-38.pyc
-|    |    |    ├── searcher.cpython-38.pyc
-|    |    |    └── utility.cpython-38.pyc
-|    |    |    
-|    |    ├── ASCII_tree_documentation.py
 |    |    ├── central_function.py
-|    |    ├── main.py
-|    |    ├── output.txt
-|    |    ├── performances.py
-|    |    ├── searcher.py
-|    |    └── utility.py
+|    |    └── main.py
 |    |    
-|    └── test/
-|         ├── output.txt
-|         ├── soal2.py
-|         ├── trapping rain water.py
-|         ├── trapping water.py
-|         └── tree.py
-|         
+|    ├── __pycache__/
+|    |    ├── ASCII_tree.cpython-311.pyc
+|    |    ├── ASCII_tree.cpython-311.pyc:Zone.Identifier
+|    |    ├── ASCII_tree_documentation.cpython-311.pyc
+|    |    ├── ASCII_tree_documentation.cpython-311.pyc:Zone.Identifier
+|    |    ├── ASCII_tree_documentation.cpython-312.pyc
+|    |    ├── ASCII_tree_documentation.cpython-312.pyc:Zone.Identifier
+|    |    ├── ASCII_tree_documentation.cpython-38.pyc
+|    |    ├── central_function.cpython-311.pyc
+|    |    ├── central_function.cpython-311.pyc:Zone.Identifier
+|    |    ├── central_function.cpython-312.pyc
+|    |    ├── central_function.cpython-312.pyc:Zone.Identifier
+|    |    ├── central_function.cpython-38.pyc
+|    |    ├── output_tree.txt
+|    |    ├── performances.cpython-38.pyc
+|    |    └── utility.cpython-38.pyc
+|    |    
+|    ├── ASCII_tree_documentation.py
+|    ├── ASCII_tree_documentation.py:Zone.Identifier
+|    ├── README.md
+|    ├── README.md:Zone.Identifier
+|    ├── central_function.py:Zone.Identifier
+|    ├── main.py
+|    ├── main.py:Zone.Identifier
+|    ├── performances.py
+|    ├── test.py
+|    └── utility.py
+|    
+├── project_so_linux/
+|    ├── __pycache__/
+|    |    ├── ASCII_tree_documentation.cpython-38.pyc
+|    |    ├── central_function.cpython-38.pyc
+|    |    ├── main.cpython-38.pyc
+|    |    ├── performances.cpython-38.pyc
+|    |    ├── searcher.cpython-38.pyc
+|    |    └── utility.cpython-38.pyc
+|    |    
+|    ├── ASCII_tree_documentation.py
+|    ├── central_function.py
+|    ├── main.py
+|    ├── output.txt
+|    ├── performances.py
+|    ├── searcher.py
+|    └── utility.py
+|    
+└── test/
+     ├── output.txt
+     ├── soal2.py
+     ├── trapping rain water.py
+     ├── trapping water.py
+     └── tree.py
+     

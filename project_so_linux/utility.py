@@ -48,6 +48,7 @@ class util:
         graph_label.grid(row=1,column=1,columnspan=len(show_curpath),rowspan=10)
 
         text_box.grid(row=1, column=0, columnspan=5, rowspan=1)
+        
         self.getText_btn(window,graph_label,text_box)
 
     def changedir_btn(self, window, performances_label, graph_label,text_box,tree_box,scrollbar):
@@ -75,6 +76,7 @@ class util:
         show_curpath = f"current path: {self.curpath}\navailable directory: {self.avdir}"
         graph_label.config(text=show_curpath)
         graph_label.grid(columnspan=len(show_curpath))
+        text_box.delete("1.0", tk.END)
 
     def remove_changedir_btn(self):
         if self.changedirButton is not None:
@@ -93,7 +95,7 @@ class util:
         self.clearing(performances_label, graph_label,text_box,tree_box,scrollbar)
         
         text_box.grid(row=1, column=0, columnspan=5, rowspan=1)
-        self.getTree_btn(window,graph_label,text_box,tree_box)
+        self.getTree_btn(window,text_box,tree_box)
         
         tree_box.grid(row=3, column=1, rowspan=25,columnspan=15, sticky="nsew")
         scrollbar.grid(row=3, column=20,rowspan=25,sticky="ns")
@@ -109,7 +111,7 @@ class util:
         else:
             self.TreeButton.grid(row=0, column=2)
     
-    def getTree_btn(self, window,graph_label,text_box,tree_box):
+    def getTree_btn(self, window,text_box,tree_box):
         if self.getTextButton is None:  # Check if the button exists
             self.getTreeButton = tk.Button(window, width=13, height=1, text='Get Tree', borderwidth=2,command=lambda:self.get_tree(text_box,tree_box))
             self.getTreeButton.grid(row=1, column=3)
@@ -130,6 +132,7 @@ class util:
             tinggi = len(tree)//20
         print(tree)
         tree_box.insert(tk.END, tree + "\n")
+        text_box.delete("1.0", tk.END)
         
     def remove_Tree_btn(self):
         if self.TreeButton is not None:
