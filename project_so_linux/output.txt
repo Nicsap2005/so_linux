@@ -1,37 +1,6 @@
-/home/nicsap/coding/
+/home/nicsap/coding/test/
 |
-├── 71230994/
+├── backup_20241205_075457/
 |    ├── del_temp.py
 |    └── del_temp.py:Zone.Identifier
 |    
-├── SO_project-master/
-|    ├── ASCII_tree_documentation.py
-|    ├── ASCII_tree_documentation.py:Zone.Identifier
-|    ├── PisahOS.py
-|    ├── PisahOS.py:Zone.Identifier
-|    ├── README.md
-|    ├── README.md:Zone.Identifier
-|    ├── central_function.py
-|    ├── central_function.py:Zone.Identifier
-|    ├── main.py
-|    ├── main.py:Zone.Identifier
-|    ├── tidak_pisah_OS.py
-|    └── tidak_pisah_OS.py:Zone.Identifier
-|    
-├── project_so_linux/
-|    ├── ASCII_tree_documentation.py
-|    ├── central_function.py
-|    ├── main.py
-|    ├── output.txt
-|    ├── performances.py
-|    ├── searcher.py
-|    └── utility.py
-|    
-└── test/
-     ├── p.py
-     ├── soal2.py
-     ├── t.py
-     ├── trapping rain water.py
-     ├── trapping water.py
-     └── tree.py
-     

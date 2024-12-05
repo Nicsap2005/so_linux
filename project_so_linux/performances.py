@@ -21,6 +21,7 @@ class Performances_stat:
         
     ############### RAM ###############
     def performances_btn(self, window, performances_label, graph_label):
+        performances_label.config(height=2,width=5)
         performances_label.grid(row=1,column=1,columnspan=10,rowspan=2)
         graph_label.grid(row=3,column=1,columnspan=40,rowspan=30)
         self.ram_btn(window, performances_label, graph_label)
@@ -75,6 +76,7 @@ class Performances_stat:
         self.update_cpu(performances_label, window, graph_label)
         
     def update_cpu(self, performances_label, window, graph_label):
+        performances_label.config(height = 4)
         if self.show_cpu_enabled:
             cpu_percent = psutil.cpu_percent(interval=0)
             cpu_freq = psutil.cpu_freq()

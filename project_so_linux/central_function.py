@@ -139,7 +139,8 @@ class Search_and_Sort_Files:
         directory = step1.strip()
         if not os.path.exists(directory):
             print("Error: Directory yang Anda masukkan tidak ada")
-            exit()
+            return False
+            # exit()
         
         kataKunci = step2
         jenisFile = step3
@@ -148,7 +149,8 @@ class Search_and_Sort_Files:
         file_ditemukan = self.search_files(directory, kataKunci, jenisFile)
         if not file_ditemukan:
             print("File yang Anda cari tidak ditemukan.")
-            exit()
+            return False
+            # exit()
         
         print(f"\nDitemukan {len(file_ditemukan)} file yang sesuai dengan kriteria yang Anda cari :")
         for file in file_ditemukan:
@@ -163,6 +165,7 @@ class Search_and_Sort_Files:
         print("\nFile Anda:")
         for file in sorted_files:
             print(f"- {file} (Size: {file.stat().st_size} bytes, Diedit pada: {file.stat().st_mtime})")
+        return True
 
 
 class BackUp_Files:

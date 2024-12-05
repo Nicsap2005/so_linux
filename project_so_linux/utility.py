@@ -42,7 +42,7 @@ class util:
         self.step4 =  None
         self.step5 =  None
         self.step6 = None
-        
+        self.success = None
         self.curpath = self.ubuntu.get_current_path()
         self.avdir = "".join(self.ubuntu.get_available_directories())
         
@@ -59,6 +59,7 @@ class util:
         self.remove_getTreeButton_btn(text_box)
         self.remove_clearTemp_btn()
         self.remove_getsortButton_btn()
+        
         text_box.delete("1.0", tk.END)
         backup_box.grid_forget()
         text_box.grid_forget()
@@ -319,6 +320,7 @@ class util:
         self.step3 =  None
         self.step4 =  None
         self.step5 =  None
+        self.success = None
         sorting = Search_and_Sort_Files()
         def show_confirmation(result):
             # Popup window
@@ -349,9 +351,13 @@ class util:
                 if self.counter == 5:
                     content = text.get("1.0", "end-1c")
                     self.step5 = content
-                    sorting.run(self.step1,self.step2,self.step3,self.step4,self.step5)
+                    result = sorting.run(self.step1,self.step2,self.step3,self.step4,self.step5)
                     text.grid_forget()
-                    label.config(text="pengurutan berhasil!\ntekan go untuk kembali")
+                    if result == True:
+                        self.success = "pengurutan berhasil!\ntekan go untuk kembali"
+                    elif result == False:
+                        self.success = "pengurutan gagal!\ntekan go untuk kembali"
+                    label.config(text=self.success)
                 if self.counter == 6:
                     popup.destroy()
     
@@ -374,9 +380,9 @@ class util:
         text_box.delete("1.0", tk.END)
 
     def remove_sort_btn(self):
-        if self.getsortButton is not None:
-            self.getsortButton.grid_forget()  # Hide the button
-            self.getsortButton = None  # Reset the button reference
+        if self.clearsortButton is not None:
+            self.clearsortButton.grid_forget()  # Hide the button
+            self.clearsortButton = None  # Reset the button reference
             
     def remove_getsortButton_btn(self):
         if self.getsortButton is not None:
@@ -394,3 +400,4 @@ class util:
         self.remove_delTemp_btn()
         self.remove_backup_btn()
         self.remove_sort_btn()
+        self.remove_getsortButton_btn()
