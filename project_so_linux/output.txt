@@ -5,58 +5,20 @@
 |    └── del_temp.py:Zone.Identifier
 |    
 ├── SO_project-master/
-|    ├── SO_project-master/
-|    |    ├── __pycache__/
-|    |    |    ├── ASCII_tree.cpython-311.pyc
-|    |    |    ├── ASCII_tree_documentation.cpython-311.pyc
-|    |    |    ├── ASCII_tree_documentation.cpython-312.pyc
-|    |    |    ├── ASCII_tree_documentation.cpython-38.pyc
-|    |    |    ├── central_function.cpython-311.pyc
-|    |    |    ├── central_function.cpython-312.pyc
-|    |    |    └── central_function.cpython-38.pyc
-|    |    |    
-|    |    ├── ASCII_tree_documentation.py
-|    |    ├── README.md
-|    |    ├── central_function.py
-|    |    └── main.py
-|    |    
-|    ├── __pycache__/
-|    |    ├── ASCII_tree.cpython-311.pyc
-|    |    ├── ASCII_tree.cpython-311.pyc:Zone.Identifier
-|    |    ├── ASCII_tree_documentation.cpython-311.pyc
-|    |    ├── ASCII_tree_documentation.cpython-311.pyc:Zone.Identifier
-|    |    ├── ASCII_tree_documentation.cpython-312.pyc
-|    |    ├── ASCII_tree_documentation.cpython-312.pyc:Zone.Identifier
-|    |    ├── ASCII_tree_documentation.cpython-38.pyc
-|    |    ├── central_function.cpython-311.pyc
-|    |    ├── central_function.cpython-311.pyc:Zone.Identifier
-|    |    ├── central_function.cpython-312.pyc
-|    |    ├── central_function.cpython-312.pyc:Zone.Identifier
-|    |    ├── central_function.cpython-38.pyc
-|    |    ├── output_tree.txt
-|    |    ├── performances.cpython-38.pyc
-|    |    └── utility.cpython-38.pyc
-|    |    
 |    ├── ASCII_tree_documentation.py
 |    ├── ASCII_tree_documentation.py:Zone.Identifier
+|    ├── PisahOS.py
+|    ├── PisahOS.py:Zone.Identifier
 |    ├── README.md
 |    ├── README.md:Zone.Identifier
+|    ├── central_function.py
 |    ├── central_function.py:Zone.Identifier
 |    ├── main.py
 |    ├── main.py:Zone.Identifier
-|    ├── performances.py
-|    ├── test.py
-|    └── utility.py
+|    ├── tidak_pisah_OS.py
+|    └── tidak_pisah_OS.py:Zone.Identifier
 |    
 ├── project_so_linux/
-|    ├── __pycache__/
-|    |    ├── ASCII_tree_documentation.cpython-38.pyc
-|    |    ├── central_function.cpython-38.pyc
-|    |    ├── main.cpython-38.pyc
-|    |    ├── performances.cpython-38.pyc
-|    |    ├── searcher.cpython-38.pyc
-|    |    └── utility.cpython-38.pyc
-|    |    
 |    ├── ASCII_tree_documentation.py
 |    ├── central_function.py
 |    ├── main.py
@@ -66,8 +28,9 @@
 |    └── utility.py
 |    
 └── test/
-     ├── output.txt
+     ├── p.py
      ├── soal2.py
+     ├── t.py
      ├── trapping rain water.py
      ├── trapping water.py
      └── tree.py

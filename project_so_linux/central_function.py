@@ -1,6 +1,9 @@
 import os
 import shutil
 import tempfile
+from pathlib import Path
+import datetime
+
 
 class LinuxOS:
     def __init__ (self):
@@ -90,9 +93,9 @@ class PenghapusSementara:
                     self.jumlah_folder_dihapus += 1
             except Exception as e:
                 print(f"Gagal menghapus {jalur_file}. Alasan: {e}")
-
         print(f"\nJumlah file yang dihapus: {self.jumlah_file_dihapus}")
         print(f"Jumlah folder yang dihapus: {self.jumlah_folder_dihapus}")
+        return self.jumlah_file_dihapus,self.jumlah_folder_dihapus
 
     def hapus_file_sementara(self):
         print(f"Lokasi folder sementara: {self.direktori_sementara}")
@@ -103,10 +106,107 @@ class PenghapusSementara:
             print("Penghapusan file sementara selesai.")
         else:
             print("Penghapusan dibatalkan.")
+
+class Search_and_Sort_Files:
+    # function untuk search file
+    def search_files(self, directory, keyword="", extension=None):
+        # ini untuk nyari file di suatu direktori berdasarkan keyword dan ekstensi yang di-input sama user..
+        try :
+            files = []
+            for root, dirs, filenames in os.walk(directory):
+                for namafile in filenames:
+                    if keyword.lower() in namafile.lower() and (not extension or namafile.endswith(extension)):
+                        files.append(Path(root)/namafile)
+            return files
+        except Exception as jenisError:
+            print(f"Error: {jenisError}")
+            return []
+
+    # function untuk sort file
+    def sort_files(self, files, sortby='nama', reverse=False):
+        # ini untuk ngurutin file berdasarkan nama, ukuran, atau waktu edit/modifikasi (usernya bisa milih)..
+        if sortby == 'nama':
+            return sorted(files, key=lambda x: x.name, reverse=reverse)
+        elif sortby == 'ukuran':
+            return sorted(files, key=lambda x: x.stat().st_size, reverse=reverse)
+        elif sortby == 'waktu edit':
+            return sorted(files, key=lambda x: x.stat().st_mtime, reverse=reverse)
+        else:
+            print("Error.. Input yang Anda masukkan salah, masukkan 'nama','ukuran', atau 'waktu edit'")
+            return files
+        
+    def run(self,step1,step2,step3,step4,step5):
+        directory = step1.strip()
+        if not os.path.exists(directory):
+            print("Error: Directory yang Anda masukkan tidak ada")
+            exit()
+        
+        kataKunci = step2
+        jenisFile = step3
+        jenisFile = None if not jenisFile else jenisFile
+
+        file_ditemukan = self.search_files(directory, kataKunci, jenisFile)
+        if not file_ditemukan:
+            print("File yang Anda cari tidak ditemukan.")
+            exit()
+        
+        print(f"\nDitemukan {len(file_ditemukan)} file yang sesuai dengan kriteria yang Anda cari :")
+        for file in file_ditemukan:
+            print(f"- {file}")
+        
+        urutan = step4
+        reverse_sort = step5 == 'y'
+
+        sorted_files = self.sort_files(file_ditemukan, sortby=urutan, reverse=reverse_sort)
+
+        print("\nFile berhasil diurutkan!")
+        print("\nFile Anda:")
+        for file in sorted_files:
+            print(f"- {file} (Size: {file.stat().st_size} bytes, Diedit pada: {file.stat().st_mtime})")
+
+
+class BackUp_Files:
+    def backup_data(self, source_dir, backup_dir):
+        if not os.path.exists(source_dir):
+            return(f"Direktori'{source_dir}' tidak ditemukan!")
             
-            
+
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        backup_path = os.path.join(backup_dir, f"backup_{timestamp}")
+
+        try:
+            shutil.copytree(source_dir, backup_path)
+            return(f"Backup '{source_dir}' dibuat di '{backup_path}'")
+        except Exception as e:
+            return(f"Terjadi error: {e}!")
+
+    def select_directory(self, title):
+        directory = input(title)
+        return directory
+
+    def run(self):
+        source_directory = self.select_directory("Pilih direktori asal yang akan di backup: ")
+        if not source_directory:
+            print("Tidak ada direktori asal yang dipilih. Selesai.")
+            exit()
+
+        backup_directory = self.select_directory("Pilih direktori untuk backup: ")
+        if not backup_directory:
+            print("Tidak ada direktori backup yang dipilih. Selesai.")
+            exit()
+
+        self.backup_data(source_directory, backup_directory)
+        
+        
 if __name__ == "__main__":
-    test = LinuxOS()
-    print(test.get_current_path())
-    print(test.get_available_directories())
-    print(test.get_available_directories())
+    def utility_E():
+        SSF = Search_and_Sort_Files()
+        SSF.run()
+
+    def utility_F():
+        BackUp = BackUp_Files()
+        BackUp.run()
+
+    def utility_G():
+        penghapus = PenghapusSementara()
+        penghapus.hapus_file_sementara()
